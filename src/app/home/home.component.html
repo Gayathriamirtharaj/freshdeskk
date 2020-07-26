@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<title>Fresh Desk</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:20%">
+  <div class="w3-dropdown-hover">
+    <button class="w3-button">Contact
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="w3-dropdown-content w3-bar-block">
+      <a routerLink ="/contactreate" class="w3-bar-item w3-button">Create Contact</a>
+      <a routerLink ="/contactupdate" class="w3-bar-item w3-button">Update Contact</a>
+      <a routerLink ="/contactdelete" class="w3-bar-item w3-button">View Contact</a>
+    </div>  
+  </div> 
+  <br/>
+  <div class="w3-dropdown-hover">
+    <button class="w3-button">Ticket
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="w3-dropdown-content w3-bar-block">
+        <a routerLink ="/ticketcreate" class="w3-bar-item w3-button">Create Ticket</a>
+        <a routerLink ="/ticketupdate" class="w3-bar-item w3-button">Update Ticket</a>
+        <a routerLink ="/ticketlist" class="w3-bar-item w3-button">View Ticket</a>
+    </div>
+  </div>
+</div>
+
+<div style="margin-left:21%">
+Freshdesk
+</div>
+ <div class="main">
+    <div id="content">
+      <router-outlet></router-outlet>
+  </div>
+  </div>      
+</body>
+</html>

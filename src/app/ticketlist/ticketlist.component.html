@@ -1,0 +1,28 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Contact List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Contacts</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ticket of ticket | async">
+          <td>{{ticket.priority}}</td>
+          <td>{{ticket.status}}</td>
+          <td>{{ticket.subject}}</td>
+          <td>{{ticket.query}}</td>
+          <td>{{ticket.contacts}}</td>
+          <td><button (click)="delete(ticket.id)" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -24,7 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           },
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "freshdesk"
+    }
+  },
+  "defaultProject": "freshdesk",
+  "cli": {
+    "analytics": "214dd833-cddc-4f47-99a4-b35479a4825d"
+  }
 }
