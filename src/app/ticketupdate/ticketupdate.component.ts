@@ -35,7 +35,7 @@ export class TicketupdateComponent implements OnInit {
     }}
 
     OnSubmit(form: NgForm) {
-      this.ticketservice.updateTicket(this.ticket.id,form.value)
+      this.ticketservice.updateTicket(form.value,this.ticket.id)
         .subscribe((data: any) => {
           console.log(form.value);
           var message="Updation success";

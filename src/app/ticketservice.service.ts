@@ -30,7 +30,7 @@ export class TicketserviceService {
     return this.http.post("http://localhost:8080/v1/freshdesk/ticket",data,{headers : reqHeader})    
  
  }
- updateTicket(id:number,ticket:Ticket):Observable<any>
+ updateTicket(ticket:Ticket,id:number):Observable<any>
  {
   const data: Ticket = {
     "id":ticket.id,
@@ -51,7 +51,7 @@ export class TicketserviceService {
 getTicketList():Observable<any>
  
  {
-   return this.http.get('$(this.rootUrl)');
+   return this.http.get("http://localhost:8080/v1/freshdesk/getAllTickets/");
  }
 
 

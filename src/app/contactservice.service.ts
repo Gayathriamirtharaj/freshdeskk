@@ -22,7 +22,7 @@ export class ContactserviceService {
     return this.http.post("http://localhost:8080/v1/freshdesk/contact",data,{headers : reqHeader})    
  
  }
- updateContact(id:number,contact:Contact):Observable<any>{
+ updateContact(contact:Contact,id:number):Observable<any>{
    const data:Contact={
      "id":contact.id,
      "contacts":contact.contacts,
@@ -36,6 +36,6 @@ export class ContactserviceService {
 }
  getContactList():Observable<any>
  {
-   return this.http.get('$(this.rootUrl)');
+   return this.http.get("http://localhost:8080/v1/freshdesk/getAllContacts");
  }
 }

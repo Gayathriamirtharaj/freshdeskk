@@ -30,7 +30,7 @@ export class ContactupdateComponent implements OnInit {
   }
 
   OnSubmit(form: NgForm) {
-    this.contactservice.updateContact(this.contact.id,form.value)
+    this.contactservice.updateContact(form.value,this.contact.id)
       .subscribe((data: any) => {
         console.log(form.value);
         var message="Updation success";
